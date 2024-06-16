@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{719A0F8D-E13D-47CF-A8FA-29ABAD48F3E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DHMSDatabaseObjects</RootNamespace>
+    <AssemblyName>DHMSDatabaseObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="001_DbScript.sql" />
+    <Content Include="001_DbScript_lab.sql" />
+    <Content Include="001_diagnosisCodesMasterData.sql" />
+    <Content Include="001_masterDatafile.sql" />
+    <Content Include="001_purchasemasterdata.sql" />
+    <Content Include="001_Up_UserOperations.sql" />
+    <Content Include="002_Up_CommonControls.sql" />
+    <Content Include="002_Up_PatientOperations.sql" />
+    <Content Include="003_Up_TreatmentDetails.sql" />
+    <Content Include="004_Up_PatientsVisistOperations.sql" />
+    <Content Include="005_Up_DatabaseBackup.sql" />
+    <Content Include="007_Up_Prescription.sql" />
+    <Content Include="008_Up_AdminOperations.sql" />
+    <Content Include="009_Up_rptOperations.sql" />
+    <Content Include="010_Up_AccountsOperations.sql" />
+    <Content Include="011_Up_PatientRevenue.sql" />
+    <Content Include="012_Uf_SplitString.sql" />
+    <Content Include="012_Up_SupplierOperations.sql" />
+    <Content Include="013_Up_LabWorksOperations.sql" />
+    <Content Include="014_Up_MaterialAndInventory.sql" />
+    <Content Include="015_Uf_BalanceCalculation.sql" />
+    <Content Include="additionlChanges.sql" />
+    <Content Include="006_Up_DoctorOperations.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
